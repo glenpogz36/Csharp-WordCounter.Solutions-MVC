@@ -27,11 +27,11 @@ __Word-Counter.Solution
         ├── WordCounter.Tests.csproj.nuget.g.targets
         └── project.assets.json__
 
-* _For More click the link :_ ** https://www.learnhowtoprogram.com/c/c-basics-and-testing/mstest-configuration-and-setup_        
+* _For More click the link :_  https://www.learnhowtoprogram.com/c/c-basics-and-testing/mstest-configuration-and-setup_        
 
 
 ### _Basic Structure of Directory for MVC and Controll Testing
-ToDoList.Solution
+_ToDoList.Solution
 ├── ToDoList
 │   ├── Controllers
 │   │   ├── HomeController.cs
@@ -57,9 +57,9 @@ ToDoList.Solution
     ├── ModelTests
     │   ├── CategoryTests.cs
     │   └── ItemTests.cs
-    └── ToDoList.Tests.csproj
+    └── ToDoList.Tests.csproj_
 
-    * _For More click the link : _https://www.learnhowtoprogram.com/c/mvc-web-applications/objects-within-objects-setup_  
+  * _For More click the link :_ https://www.learnhowtoprogram.com/c/mvc-web-applications/objects-within-objects-setup_
 
 ### Specs
 | Spec | Search | Text | Result |

@@ -16,7 +16,7 @@ namespace WordCounter.Tests
       int count = 1;
 
       // Act
-      int result = RepeatCounter.CountTheWords(input, RepeatCounter.SplitTheText(output));
+      int result = RepeatCounter.CountTheWords(input, RepeatCounter.SplitText(output));
 
       //Assert
       Assert.AreEqual(count, result);
@@ -31,7 +31,7 @@ namespace WordCounter.Tests
       int count = 1;
 
       // Act
-      int result = RepeatCounter.CountTheWords(input, RepeatCounter.SplitTheText(output));
+      int result = RepeatCounter.CountTheWords(input, RepeatCounter.SplitText(output));
 
       // Assert
       Assert.AreEqual(count, result);
@@ -46,7 +46,7 @@ namespace WordCounter.Tests
       int count = 0;
 
       // Act
-      int result = RepeatCounter.CountTheWords(input, RepeatCounter.SplitTheText(output));
+      int result = RepeatCounter.CountTheWords(input, RepeatCounter.SplitText(output));
 
       // Assert
       Assert.AreEqual(count, result);
