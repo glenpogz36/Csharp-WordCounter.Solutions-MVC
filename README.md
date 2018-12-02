@@ -1,4 +1,4 @@
-# _C#-Word Counter_
+# _C#-Word Counter MVC _
 
 #### _Single Webpage for Epicodus, 11.16.2018_
 
@@ -9,7 +9,7 @@
 _Create a program that gathers both a word and sentence from a user, then checks how frequently the word appears in the sentence. It should check for full word matches only. (For instance, if provided the word "cat" and sentence "I'm walking to the cathedral." the first three letters of the word cathedral would not be counted.)_
 
 
-###_Basic Structure of Directory for Program and Testing_
+### _Basic Structure of Directory for Program and Testing_
 
 __Word-Counter.Solution
 ├── WordCounter
@@ -28,6 +28,39 @@ __Word-Counter.Solution
         └── project.assets.json__
 
 * _For More click the link :_ ** https://www.learnhowtoprogram.com/c/c-basics-and-testing/mstest-configuration-and-setup_        
+
+
+### _Basic Structure of Directory for MVC and Controll Testing
+ToDoList.Solution
+├── ToDoList
+│   ├── Controllers
+│   │   ├── HomeController.cs
+│   │   └── ItemsController.cs
+│   ├── Models
+│   │   ├── Category.cs
+│   │   └── Item.cs
+│   ├── Program.cs
+│   ├── Startup.cs
+│   ├── ToDoList.csproj
+│   └── Views
+│       ├── Home
+│       │   └── Index.cshtml
+│       └── Items
+│           ├── DeleteAll.cshtml
+│           ├── Index.cshtml
+│           ├── New.cshtml
+│           └── Show.cshtml
+└── ToDoList.Tests
+    ├── ControllerTests
+    │   ├── HomeControllerTests.cs
+    │   └── ItemsControllerTests.cs
+    ├── ModelTests
+    │   ├── CategoryTests.cs
+    │   └── ItemTests.cs
+    └── ToDoList.Tests.csproj
+
+    * _For More click the link : _https://www.learnhowtoprogram.com/c/mvc-web-applications/objects-within-objects-setup_  
+
 ### Specs
 | Spec | Search | Text | Result |
 | :-------------     | :------------- | :------------- | :------------- |
@@ -38,18 +71,24 @@ __Word-Counter.Solution
 
 
 ## Setup/Installation Requirements
-* Clone this repository https://github.com/glenpogz36/Csharp-WordCounter.Solutions
-* _Download .NET Core 2.1.3 SDK and .NET Core Runtime 2.0.9 and install them. Download Mono and install it._
-* _Change into the work directory:: $ cd WordCounter.Solution_
+* Clone this repository https://github.com/glenpogz36/Csharp-WordCounter.Solutions-MVC
 * _To edit the project, open the project in your preferred text editor._
-* _To run the program, first navigate to the location of the WordCounter.cs file then compile and execute: $ cd WordCounter/Models $ mcs WordCounter.cs; mono WordCounter.exe;_
-* _To run the tests, use these commands: $ cd WordCounter.Tests $ dotnet test_
+* _Download
+ "Microsoft.AspNetCore" Version="1.1.2"
+  "Microsoft.AspNetCore.Http" Version="1.1.2"
+  "Microsoft.AspNetCore.Mvc" Version="1.1.3"._
+* _To download create A file inside the Project Directory creating Program.cs and Startup.cs>
+* _To run the program, first navigate to the location of the Program.cs and Startup.cs file then compile and execute:
+$ dotnet restore : to download AspNetCore
+$ dotnet build : to check for errors
+$ dotnet run : to run localhost:5000
+* _To run the tests, use these commands inside WordCounter.Tests directory using: $ cd WordCounter.Tests $ dotnet test_
 
 ## Technologies Used
 
 * _C#_
 * _.NET_
-* _mono_
+* _AspNETCore_
 * _Atom_
 * _GitHub_
 
