@@ -34,9 +34,8 @@ namespace WordCounter
             });
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                await context.Response.WriteAsync("Stop trying to make fetch happen. Its not going to happen!");
             });
-            app.UseDeveloperExceptionPage();
         }
     }
 }
