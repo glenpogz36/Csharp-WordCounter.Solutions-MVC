@@ -1,25 +1,38 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using WordCounter.Controllers;
-using WordCounter.Models;
-
-namespace WordCounter.Tests
-{
-  [TestClass]
-  public class HomeControllerTest
-  {
-    [TestMethod]
-    public void Index_Returns_True()
-    {
-        //Arrange
-        HomeController controller = new HomeController();
-
-        //Act
-        ActionResult indexView = controller.Index();
-
-        //Assert
-        Assert.IsInstanceOfType(indexView, typeof(ViewResult));
-    }
-  }
-}
+// using Microsoft.AspNetCore.Mvc;
+// using System.Collections.Generic;
+// using WordCounter.Controllers;
+// using WordCounter.Models;
+//
+// namespace WordCounter.Tests
+// {
+//     [TestClass]
+//     public class HomeControllerTest
+//     {
+//         [TestMethod]
+//     public void Create_ReturnsCorrectActionType_RedirectToActionResult()
+//     {
+//         //Arrange
+//         HomeController controller = new HomeController();
+//
+//         //Act
+//         ActionResult view = controller.SetWord("dog");
+//
+//         //Assert
+//         Assert.IsInstanceOfType(view, typeof(RedirectToActionResult));
+//     }
+//
+//     [TestMethod]
+//     public void Create_RedirectsToCorrectAction_Index()
+//     {
+//         //Arrange
+//         ItemsController controller = new ItemsController();
+//         RedirectToActionResult actionResult = controller.SetWord("dog") as RedirectToActionResult;
+//
+//         //Act
+//         string result = actionResult.ActionName;
+//
+//         //Assert
+//         Assert.AreEqual(result, "Index");
+//     }
+//   }
+// }
