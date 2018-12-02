@@ -9,7 +9,7 @@ namespace WordCounter.Models
     private string _word;
       private int _countMatch;
 
-    public  RepeatCounter(string word, string output)
+    public  RepeatCounter(string word, string sentence)
     {
       _word = word;
       _sentence = sentence;
@@ -23,7 +23,7 @@ namespace WordCounter.Models
 
     public string GetWord()
     {
-      return _word.ToLower;
+      return _word.ToLower();
     }
 
     public void SetSentence(string sentence)

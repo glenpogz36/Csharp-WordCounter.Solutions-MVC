@@ -31,7 +31,7 @@ public class WordCounterController : Controller
 //count the matching/loop
   int wordCount = RepeatCounter.CountTheWords(newWord.GetWord(), wordArray);
 
-    newWord.SetCountMatch(wordCount);
+    newWord.SetCountWords(wordCount);
     return View("Index", newWord);
   }
  }

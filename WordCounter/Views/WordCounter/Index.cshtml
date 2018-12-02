@@ -3,12 +3,12 @@
 }
 <div class="container">
 <h2>WordCounter Result</h2>
-  <p>User Input: "@Model.GetUserInput()"</p>
+  <p>Sentence: "@Model.GetSentence()"</p>
   <hr>
-  <p>Result: "@Model.GetUserResult()"</p>
+  <p>Words: "@Model.GetWord()"</p>
   <hr>
-  <p>Matches: "@Model.GetUserInput()" was found @Model.GetCountMatch() times.</p>
+  <p>Matches: "@Model.GetWord()" matches @Model.GetCountMatch() times.</p>
 </div>
 <hr>
 <br>
-<button class="w3-button w3-blue"><a href="/word/new"><h1>Play Again?</a></div>
+  <button type="submit">Play again?</button>
