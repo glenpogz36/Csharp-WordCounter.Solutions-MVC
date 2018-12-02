@@ -1,15 +1,18 @@
 using System;
 using System.Collections.Generic;
+using System.Text;
+
+
 
 namespace WordCounter.Models
 {
   public class RepeatCounter
   {
-    private string _sentence;
     private string _word;
-      private int _countMatch;
+    private string _sentence;
+    private int _countWords;
 
-    public  RepeatCounter(string word, string sentence)
+    public RepeatCounter (string word, string sentence)
     {
       _word = word;
       _sentence = sentence;
@@ -17,15 +20,14 @@ namespace WordCounter.Models
 
     public void SetWord(string word)
     {
-    _word = word;
-
+      _word = word;
     }
 
     public string GetWord()
     {
       return _word.ToLower();
-    }
 
+    }
     public void SetSentence(string sentence)
     {
       _sentence = sentence;
@@ -36,22 +38,22 @@ namespace WordCounter.Models
       return _sentence.ToLower();
 
     }
-    public void SetCountWords(int countMatch)
+    public void SetCountWords(int countWords)
     {
-      _countMatch = countMatch;
+      _countWords = countWords;
     }
     public int GetCountWords()
     {
-      return _countMatch;
+      return _countWords;
     }
-
-
-    public static string[] SplitTheText(string sentence)
+    public static string[] SplitText(string text)
     {
-    char[] DeleteCharacters = new char[] {',','.','!','?',':',';',' '};
-    string[] splitsentence = sentence.Split(DeleteCharacters);
-    return splitsentence;
+
+      char[] DeleteCharacters = new char[] {',','.','!','?',':',';',' '};
+      string[] newsentence = text.Split(DeleteCharacters);
+      return newsentence;
     }
+
 
     public static int CountTheWords(string target, string[] words)
     {
