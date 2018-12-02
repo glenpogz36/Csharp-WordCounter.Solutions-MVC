@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+<div class="container">
+<h2>WordCounter Result</h2>
+  <p>User Input: "@Model.GetUserInput()"</p>
+  <hr>
+  <p>Result: "@Model.GetUserResult()"</p>
+  <hr>
+  <p>Matches: "@Model.GetUserInput()" was found @Model.GetCountMatch() times.</p>
+</div>
+<hr>
+<br>
+<button class="w3-button w3-blue"><a href="/word/new"><h1>Play Again?</a></div>

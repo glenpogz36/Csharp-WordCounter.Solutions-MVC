@@ -6,7 +6,7 @@ using WordCounter.Models;
 namespace WordCounter.Tests
 {
   [TestClass]
-  public class RepeatCounterTest
+  public class WordCounterTests
   {
     [TestMethod]
     public void CountTheWords_NumberOfWords()

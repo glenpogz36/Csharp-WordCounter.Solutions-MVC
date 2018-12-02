@@ -7,32 +7,49 @@ namespace WordCounter.Models
   {
     private string _sentence;
     private string _word;
+      private int _countMatch;
 
-    public void SetPrivateInput(string word)
+    public  RepeatCounter(string word, string output)
     {
       _word = word;
+      _sentence = sentence;
     }
 
-    public string GetPrivateInput()
+    public void SetWord(string word)
     {
-      return _word;
+    _word = word;
 
     }
 
-    public void SetPrivateText(string sentence)
+    public string GetWord()
+    {
+      return _word.ToLower;
+    }
+
+    public void SetSentence(string sentence)
     {
       _sentence = sentence;
     }
 
-    public string GetPrivateText()
+    public string GetSentence()
     {
-      return _sentence;
+      return _sentence.ToLower();
 
     }
+    public void SetCountWords(int countMatch)
+    {
+      _countMatch = countMatch;
+    }
+    public int GetCountWords()
+    {
+      return _countMatch;
+    }
+
 
     public static string[] SplitTheText(string sentence)
     {
-    string[] splitsentence = sentence.Split(' ');
+    char[] DeleteCharacters = new char[] {',','.','!','?',':',';',' '};
+    string[] splitsentence = sentence.Split(DeleteCharacters);
     return splitsentence;
     }
 
