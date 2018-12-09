@@ -10,12 +10,16 @@ namespace WordCounter.Models
   {
     private string _word;
     private string _sentence;
-    private int _countWords;
 
     public RepeatCounter (string word, string sentence)
     {
       _word = word;
       _sentence = sentence;
+    }
+    public string GetWord()
+    {
+      return _word.ToLower();
+
     }
 
     public void SetWord(string word)
@@ -23,50 +27,38 @@ namespace WordCounter.Models
       _word = word;
     }
 
-    public string GetWord()
-    {
-      return _word.ToLower();
 
-    }
-    public void SetSentence(string sentence)
-    {
-      _sentence = sentence;
-    }
 
     public string GetSentence()
     {
       return _sentence.ToLower();
 
     }
-    public void SetCountWords(int countWords)
-    {
-      _countWords = countWords;
-    }
-    public int GetCountWords()
-    {
-      return _countWords;
-    }
-    public static string[] SplitText(string text)
-    {
 
-      char[] DeleteCharacters = new char[] {',','.','!','?',':',';',' '};
-      string[] newsentence = text.Split(DeleteCharacters);
-      return newsentence;
+    public void SetSentence(string sentence)
+    {
+      _sentence = sentence;
     }
 
 
-    public static int CountTheWords(string target, string[] words)
+
+    public string[] SplitText()
     {
-      int matches = 0;
-      foreach(string word in words)
+      string[] words = _sentence.Split(' ');
+      return words;
+    }
+
+    public int CountTheWords()
     {
-      if (word.Equals(target))
+      int result = 0;
+      foreach (string word in SplitText())
       {
-         matches ++;
+        if (word == _word)
+        {
+          result++;
+        }
       }
+      return result;
     }
-      return matches;
-    }
-
   }
 }

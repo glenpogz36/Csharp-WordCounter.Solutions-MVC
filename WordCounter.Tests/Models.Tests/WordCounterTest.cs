@@ -1,14 +1,12 @@
-using System;
-using System.Collections.Generic;
 using WordCounter.Models;
 
 namespace WordCounter.Tests
 {
   [TestClass]
-  public class WordCounterTests
+  public class RepeatCounterTest
   {
     [TestMethod]
-    public void CountTheWords_NumberOfWords()
+    public void CountTheWords_NumberOfWords_Wordl()
     {
       //Arrange
       string input = "Basketball";
@@ -16,14 +14,14 @@ namespace WordCounter.Tests
       int count = 1;
 
       // Act
-      int result = RepeatCounter.CountTheWords(input, RepeatCounter.SplitText(output));
+      int result = RepeatCounter.CountTheWords_Word(input, RepeatCounter.SplitTheText(output));
 
       //Assert
       Assert.AreEqual(count, result);
     }
 
     [TestMethod]
-    public void Wordmatch_Exist()
+    public void Wordmatch_Exist_Word()
     {
       // Arrange
       string input = "eat";
@@ -31,14 +29,14 @@ namespace WordCounter.Tests
       int count = 1;
 
       // Act
-      int result = RepeatCounter.CountTheWords(input, RepeatCounter.SplitText(output));
+      int result = RepeatCounter.CountTheWords(input, RepeatCounter.SplitTheText(output));
 
       // Assert
       Assert.AreEqual(count, result);
     }
 
     [TestMethod]
-    public void Wordmatch_NotExist()
+    public void Wordmatch_NotExist_Word()
     {
       // Arrange
       string input = "Eat";
@@ -46,7 +44,7 @@ namespace WordCounter.Tests
       int count = 0;
 
       // Act
-      int result = RepeatCounter.CountTheWords(input, RepeatCounter.SplitText(output));
+      int result = RepeatCounter.CountTheWords(input, RepeatCounter.SplitTheText(output));
 
       // Assert
       Assert.AreEqual(count, result);

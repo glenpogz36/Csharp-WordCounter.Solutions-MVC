@@ -18,14 +18,11 @@ namespace WordCounter.Controllers
       }
 
       [HttpPost("/word")]
-      public ActionResult Create()
+      public ActionResult Index(string word, string sentence)
       {
-        RepeatCounter newWord = new RepeatCounter(Request.Form["new-word"],Request.Form["new-sentence"]);
-       string[] wordsArray = RepeatCounter.SplitText(newWord.GetSentence());
-
-       int wordCount = RepeatCounter.CountTheWords(newWord.GetWord(),wordsArray);
-       newWord.SetCountWords(wordCount);
-       return View("Index", newWord);
+      RepeatCounter newCount = new RepeatCounter(word, sentence);
+      return View(newCount);
       }
     }
-}
+
+  }
